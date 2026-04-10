@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>SpaceGeek - Sur les ondes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: radial-gradient(circle at top, #050816, #02030a);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            color: #7cf7ff;
+            margin-top: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .tab.active {
+            background: #1b2cff;
+        }
+
+        .content {
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        .box {
+            display: none;
+        }
+
+        .box.active {
+            display: block;
+        }
+
+        audio {
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 80%;
+            height: 150px;
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+        }
+
+        .btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #1b2cff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🎙️ Sur les ondes de SpaceGeek</h1>
+
+<div class="tabs">
+    <div class="tab active" onclick="showTab(0)">📡 On Air</div>
+    <div class="tab" onclick="showTab(1)">❓ Questions de SpaceGeek</div>
+</div>
+
+<div class="content">
+
+    <!-- ON AIR -->
+    <div class="box active">
+        <h2>Lecture audio SpaceGeek</h2>
+        <p>Remplace le fichier "audio.mp3" par ton propre son 🎧</p>
+
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Ton navigateur ne supporte pas l'audio.
+        </audio>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="box">
+        <h2>❓ Questions de SpaceGeek</h2>
+        <p>Pose ta question à SpaceGeek :</p>
+
+        <textarea placeholder="Écris ta question ici..."></textarea>
+        <br>
+        <button class="btn" onclick="alert('Question envoyée à SpaceGeek 🚀')">
+            Envoyer
+        </button>
+    </div>
+
+</div>
+
+<script>
+function showTab(index) {
+    let tabs = document.querySelectorAll(".tab");
+    let boxes = document.querySelectorAll(".box");
+
+    tabs.forEach(t => t.classList.remove("active"));
+    boxes.forEach(b => b.classList.remove("active"));
+
+    tabs[index].classList.add("active");
+    boxes[index].classList.add("active");
+}
+</script>
+
+</body>
+</html>
