@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>SpaceGeek - Radios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: radial-gradient(circle at top, #0a0f2a, #05060f);
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            color: #7cf7ff;
+            margin-top: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: rgba(124,247,255,0.1);
+        }
+
+        a {
+            color: #7cf7ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back {
+            margin-top: 20px;
+            display: inline-block;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>📻 Radios SpaceGeek</h1>
+
+<div class="grid">
+
+    <div class="card">
+        <h3>NRJ</h3>
+        <a href="https://www.nrj.fr/webradios" target="_blank">Écouter</a>
+    </div>
+
+    <div class="card">
+        <h3>Skyrock</h3>
+        <a href="https://skyrock.fm/radio" target="_blank">Écouter</a>
+    </div>
+
+    <div class="card">
+        <h3>France Inter</h3>
+        <a href="https://www.radiofrance.fr/franceinter/podcasts" target="_blank">Écouter</a>
+    </div>
+
+    <div class="card">
+        <h3>FIP</h3>
+        <a href="https://www.radiofrance.fr/fip/radio-numerique" target="_blank">Écouter</a>
+    </div>
+
+    <div class="card">
+        <h3>Chill Radio</h3>
+        <a href="https://www.youtube.com/results?search_query=chill+radio+live" target="_blank">Écouter</a>
+    </div>
+
+</div>
+
+<a class="back" href="index.html">⬅ Retour accueil</a>
+
+</body>
+</html>
